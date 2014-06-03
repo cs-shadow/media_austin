@@ -46,9 +46,12 @@
 	<section>
 	  <h2>Media ecosystem in Drupal 8</h2>
 	  <p style="margin-top: 2em;">
-	    <small><a href="http://janezurevc.name">Janez Urevc</a> / <a href="http://twitter.com/slashrsm">@slashrsm</a> / <a href="http://janezurevc.name">http://janezurevc.name</a></small><br />
-	    <small><a href="http://davereid.net">Dave Reid</a> / <a href="http://twitter.com/davereid">@davereid</a> / <a href="http://davereid.net">http://davereid.net</a></small>
+	    <a href="http://janezurevc.name">Janez Urevc</a> / <a href="http://twitter.com/slashrsm">@slashrsm</a> / <a href="http://janezurevc.name">http://janezurevc.name</a><br />
+	    <a href="http://davereid.net">Dave Reid</a> / <a href="http://twitter.com/davereid">@davereid</a> / <a href="http://davereid.net">http://davereid.net</a>
 	  </p>
+    <p style="margin-top: 2em;">
+      <a href="http://slashrsm.github.io/media_austin">http://slashrsm.github.io/media_austin</a>
+    </p>
 	</section>
 
 	<section>
@@ -62,7 +65,12 @@
 	  </section>
 
 	  <section>
-	    <h2>Dave</h2>
+      <p>
+        <img src="img/davereid.jpg" style="display: inline;" />
+        <img src="img/lullabot.png" style="display: inline;" />
+      </p>
+	    <h2>Dave Reid - @davereid</h2>
+      <h4>Media/File entity lead</h4>
 	  </section>
 	</section>
 
@@ -74,7 +82,7 @@
 	      <li class="fragment">our "competitors" handle this "better" than we do</li>
 	      <li class="fragment">we have lots of enterprise media companies using Drupal</li>
 	      <li class="fragment">people expect media-rich websites</li>
-	      <li class="fragment">site editors expect lean & efficent media creation/organization process</li>
+	      <li class="fragment">site editors expect lean & efficient media creation/organization process</li>
 	      <li class="fragment">we simply need to handle media well</li>
 	    </ul>
 	  </section>
@@ -97,7 +105,7 @@
 	      - lists all files in the system along with some basic usage (size, filename, usage count)<br />
               - view<br />
             </aside>
-	    
+
 	  </section>
 
 	  <section>
@@ -105,6 +113,7 @@
 
             <aside class="notes">
 	      - embed images<br />
+        -
               - does not support other media types<br />
             </aside>
 
@@ -138,7 +147,7 @@
 
 	  <section>
 	    <h3>Ease of use</h3>
-	    Multi-upload, intiutive library, Wysiwyg integration, drag-and-drop, ...
+	    Multi-upload, intuitive library, Wysiwyg integration, drag-and-drop, ...
 	  </section>
 
 	  <section>
@@ -148,7 +157,7 @@
             <aside class="notes">
 	      - feature modules to make life easier<br />
               - one can use what really needs<br />
-              - wysiwyg<br />
+              - WYSWIYG<br />
               - DnD library<br />
             </aside>
 	  </section>
@@ -186,10 +195,12 @@
               - bundles can have semantic meaning<br />
             </aside>
 	  </section>
-	  
+
 	  <section>
 	    <h3>Basic concepts discussion</h3>
 	    There are still some disagreements... but we agree that we disagree! <a href="https://groups.drupal.org/node/384813">https://groups.drupal.org/node/384813</a>
+      <p><img src="img/boxing.jpg" /></p>
+      <small class="attribution">Photo by Paul O'Donoghue - <a href="https://flic.kr/p/cYQVgo">https://flic.kr/p/cYQVgo</a></small>
 
             <aside class="notes">
 	      - disagreement basically about one technical detail<br />
@@ -201,7 +212,35 @@
 	</section>
 
 	<section>
-	  <h2>History: Initial Media and File entity plans</h2>
+    <section>
+	    <h2>History: Initial Media and File Entity plans</h2>
+    </section>
+
+    <section>
+      <h2>Problems (we have many)</h2>
+      <ul>
+        <li class="fragment">no stable 2.x release</li>
+        <li class="fragment">WYSIWYG handling and regressions</li>
+        <li class="fragment">overly-complex out of the box (configuring file display)</li>
+        <li class="fragment">uphill battle against
+          <ul>
+            <li>core assumptions</li>
+            <li class="fragment">multiple-upload workflow</li>
+            <li class="fragment">accessibility</li>
+            <li class="fragment">usability vs extensibility</li>
+          </ul>
+        </li>
+        <li class="fragment">sustained maintainership</li>
+        <li class="fragment">and more!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Regroup and rewrite</h3>
+      <p>Started planning <a href="https://hackpad.com/File-entity-and-Media-D8-plan-ZqinaaA6WHH">a decoupled approach</a> and focus on core problem areas from ground-up.</p><br/>
+      <p>Focus on involving the ideal workflow and tools from day one.<p><br/>
+      <p>Split up File Entity into smaller chunks for fieldable files, file types, download formatter.</p>
+    </section>
 	</section>
 
 	<section>
@@ -211,7 +250,7 @@
 	    <a href="https://groups.drupal.org/node/418803">https://groups.drupal.org/node/418803</a>
 
             <aside class="notes">
-	      - diplomacy brakethrough<br />
+	      - diplomacy breakthrough<br />
             </aside>
 	  </section>
 	  <section>
@@ -225,6 +264,7 @@
 	      <li>That usually means they can be used also in non-media context</li>
 	      <li>Entity WYSIWYG embed (<a href="http://drupal.org/project/entity_embed">entity_embed</a>) - Google Summer of code project</li>
 	      <li>Entity browser (<a href="http://drupal.org/project/entity_browser">entity_browser</a>)</li>
+        <li>Fallback formatter (<a href="http://drupal.org/project/fallback_formatter">fallback_formatter</a>)</li>
 	    </ul>
 	  </section>
 	</section>
@@ -248,7 +288,7 @@
 	    <h3>Roadmap -  step 2</h3>
 	    <ul>
 	      <li>entity embed: UI/UX, integration with CKEditor</li>
-	      <li>entity embed <=> entity browser integration</li>
+	      <li>entity embed &lt;=&gt; entity browser integration</li>
 	      <li>entity browser: media library implementation</li>
 	    </ul>
 	  </section>
@@ -267,10 +307,55 @@
 	      <li>3rd party integrations</li>
 	      <li>cropping</li>
 	      <li>derivatives</li>
-	      <li>advanced access control</li>
+	      <li>advanced access control and rights management</li>
 	    </ul>
 	  </section>
 	</section>
+
+  <section>
+    <section>
+      <h2>Challenges in Drupal 8</h2>
+      <aside class="notes">
+        We still face some uphill challenges due to some unsolved issues with Drupal 8 core.
+        But the good news at least is that these can still be worked on.
+      </aside>
+    </section>
+
+    <section>
+      <h4>Challenges in D8</h4>
+      <h3>External dependencies for contrib</h3>
+      <p><a href="https://drupal.org/node/1398772">#1398772: Consider composer.json to manage dependencies instead of .info files</a></p>
+    </section>
+
+    <section>
+      <h4>Challenges in D8</h4>
+      <h3>Using formatters and widgets on data without any real fields</h3>
+      <h3>Lack of actual decoupling in core.</h3>
+      <h3>Too many fields? File, image, and entity reference?</h3>
+      <p><a href="https://drupal.org/node/2274169">#2274169: EntityViewBuilder::viewField() / viewFieldItem() don't work for arbitrary added field values</a></p>
+      <p><a href="https://drupal.org/node/1448124">#1448124: Image dimensions should be available from file_load() for images, and not stored in field data</a></p>
+      <p><a href="https://drupal.org/node/2271349">#2271349: Node and Comment links should be display components</a></p>
+    </section>
+
+    <section>
+      <h4>Challenges in D8</h4>
+      <h3>Files lack proper access controller</h3>
+      <p><a href="https://drupal.org/node/2078473">#2078473: Use entity access API for checking access to private files</a></p>
+      <p><a href="https://drupal.org/node/2148353">#2148353: File access (hook_file_download) does not use an EntityAccessController</a></p>
+    </section>
+
+    <section>
+      <h4>Challenges in D8</h4>
+      <h3>Typed Data and Plugins</h3>
+      <p><a href="https://drupal.org/node/2278073">#2278073: Files with spaces in URIs fail entity TypedData validation</a></p>
+      <p><a href="https://drupal.org/node/2277981">#2277981: Provide a service for handling context-aware plugins</a></p>
+    </section>
+
+    <section>
+      <h4>Challenges in D8</h4>
+      <h3><del>File usage system deletes your files</del></h3>
+    </section>
+  </section>
 
 	<section>
 	  <section>
@@ -280,7 +365,7 @@
 	    <aside class="notes">
 	      - would love to say that everything is done, but I'd lie<br />
 	      - have a project?<br />
-	      - interesed in Media?<br />
+	      - interested in Media?<br />
 	    </aside>
 	  </section>
 
@@ -302,7 +387,7 @@
 	    <ul>
 	      <li><a href="http://groups.drupal.org/media">groups.drupal.org/media</a></li>
 	      <li>weekly scrum meetings on Hangout onAir</li>
-	      <li>Projects on d.o: entity_browser, entity_embed, media_entity, media, file_entity</li>
+	      <li>Projects on d.o: entity_browser, entity_embed, fallback_formatter, media_entity, media, file_entity</li>
 	      <li>#drupal-media @ Freenode</li>
 	      <li>@slashrsm, <a href="http://drupal.org/user/744628">drupal.org/user/744628</a></li>
 	      <li>@Dave Reid, <a href="https://drupal.org/user/53892">drupal.org/user/53892</a></li>
