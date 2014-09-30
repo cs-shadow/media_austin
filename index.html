@@ -102,7 +102,7 @@
             <img src="img/listing.png" />
 
             <aside class="notes">
-	      - lists all files in the system along with some basic usage (size, filename, usage count)<br />
+	      - lists all files in the system along with some basic usage (size, file name, usage count)<br />
               - view<br />
             </aside>
 
@@ -238,10 +238,69 @@
 
     <section>
       <h2>Component: Entity Browser</h2>
+      <ul>
+        <li>general entity browsing tool</li>
+        <li>plug-gable</li>
+        <li>can be used in different contexts</li>
+        <li>based on what you can see in D7 but done in a more
+        flexible way</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Component: Entity Browser</h2>
+      <h3>Potential use cases</h3>
+      <ul>
+        <li>find and add 3 related articles</li>
+        <li>upload 5, select 3 existing images and add all of them to a gallery</li>
+        <li>find a YouTube video and embed it into WYSIWYG</li>
+        <li>find and send 50 articles to a remote service</li>
+        <li><em>you</em> name it!</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Component: Entity Browser</h2>
+      <img src="./img/tab_tabs.png" />
+    </section>
+
+    <section>
+      <h2>Component: Entity Browser</h2>
+      <img src="./img/seldisplay_grid.png" />
+    </section>
+
+    <section>
+      <h2>Component: Entity Browser</h2>
+      <a href="https://www.drupal.org/node/2289821">drupal.org/node/2289821</a>
+      <img src="./img/architecture_0.png" />
     </section>
 
     <section>
       <h2>Component: Media Entity</h2>
+      <ul>
+        <li>storage component that uses "not everything is a file"
+        approach</li>
+        <li>creates an entity type from ground up</li>
+        <li>uses fields to store different types of media</li>
+        <li>not necessary to store all media as local files (in
+        file_managed) table</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Component: Media Entity</h2>
+      <h3>Media type plugins</h3>
+      <ul>
+        <li>handle various media types: business logic, validation,
+        meta-data, ...</li>
+        <li>validation: exposes validation callback that can be used
+        in form, custom code, ...</li>
+        <li>meta-data: list of "fields" that are provided</li>
+        <li>mapping to Drupal fields can be defined (and done
+        automatically)</li>
+        <li>can be used at display time</li>
+        <li>...</li>
+      </ul>
     </section>
 
     <section>
